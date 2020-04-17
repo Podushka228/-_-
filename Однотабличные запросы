@@ -1,0 +1,73 @@
+
+1)Select * 
+from students
+where score
+between 4 and 4.5
+
+2)Select *
+From students
+Where CAST(n_group as varchar) LIKE '2072'
+
+3)Select * 
+from students
+order by n_group DESC, surname
+
+4)Select * 
+from students
+where score
+between  4 and 5
+Order by score DESC
+
+
+5)Select hobbies.name,hobbies.risk
+from hobbies
+where hobbies.name
+in ('Футбол','Хоккей')
+
+6)Select *
+from students_hobbies
+where date_start 
+between '2017-02-02' and '2019-02-02'
+and date_finish
+is not null
+
+7)Select *
+from students
+where score>4.5
+Order by score DESC
+
+8)Select *
+from students
+where score>4.5
+Order by score DESC LIMIT 5
+
+
+9)
+Select hobbies.risk,
+CASE
+when hobbies.risk>=8 THEN 'Отлично'
+when hobbies.risk>=6 and hobbies.risk<8 THEN 'Высокий'
+when hobbies.risk>=4 and hobbies.risk<8 THEN 'Средний'
+when hobbies.risk>=2 and hobbies.risk<4 THEN 'Низкий'
+
+ELSE 'GG'
+END
+FROM hobbies
+
+10)Select *
+from hobbies
+
+order by risk DESC LIMIT 3
+
+
+
+
+
+
+
+
+
+
+
+
+
