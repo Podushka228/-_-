@@ -1,0 +1,47 @@
+1)
+SELECT n_group, count(score)
+from students st
+GROUP BY n_group 
+
+2)
+SELECT n_group, avg(score)
+from students st
+GROUP BY n_group 
+
+
+3) Select COUNT(name)
+FROM students
+
+5)
+Select st.n_group, avg(score)
+From students st
+group by st.n_group
+
+6)
+select n_group , avg(score)
+from students st
+Group by n_group
+order by st.n_group DESC LIMIT 1
+
+7)
+select n_group,avg(score)
+from students
+group by n_group
+having avg(score)<=4.5
+
+8)select n_group , Count(name), max(score),avg(score), min(score)
+from students st
+Group by n_group
+
+9)
+select name , max(score)
+from students st
+where n_group=2072
+Group by name
+order by max DESC LIMIT 3
+
+10)
+SELECT name,surname,n_group, max(score)
+from students st
+GROUP BY n_group,name,surname
+order by max DESC LIMIT 4
